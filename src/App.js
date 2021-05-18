@@ -100,6 +100,15 @@ function App() {
       {(typeof weatherData.main != 'undefined') ? 
       <React.Fragment>
         <Row>
+          <Col xs={5}/>
+          <Col>
+            <h5>
+              Current Weather
+            </h5>
+          </Col>
+          <Col xs={5}/>
+        </Row>
+        <Row>
           <Col xs={2}/>
           <Col xs={8}>
             <CurrentWeatherCard data={weatherData} />
@@ -107,6 +116,15 @@ function App() {
           <Col xs={2} />
         </Row> 
         
+        <Row>
+          <Col xs={5}/>
+          <Col>
+            <h5>
+              5 Day Forecast:
+            </h5>
+          </Col>
+          <Col xs={5}/>
+        </Row>
         <Row>
           <Col xs={2}/>
           <Col xs={8}>

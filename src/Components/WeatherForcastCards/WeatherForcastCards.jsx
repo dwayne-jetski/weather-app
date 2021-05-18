@@ -19,11 +19,11 @@ function WeatherForcastCards(weatherForecast) {
 
             return(
                 <Col>
-                    <Card>
+                    <Card bg="secondary" text="light" className="card_style" >
                         <Card.Body>
                             <Card.Text>{time}</Card.Text>
                             <Card.Text>High:{main.temp_max} </Card.Text>
-                            <Card.Text>Low: {main.min_temp}</Card.Text>
+                            <Card.Text>Low: {main.temp_min}</Card.Text>
                             <Card.Text>Description: {weather[0].description}</Card.Text>
                             <Card.Text></Card.Text>
                         </Card.Body>

@@ -19,7 +19,7 @@ function WeatherCards(weatherData) {
 
         return(
             <div>
-                <Card bg="dark" border='danger' text="light" className="card_style" style = {{ width: '20rem'}}>
+                <Card bg="dark" text="light" className="card_style" style = {{ width: '20rem'}}>
                     <Card.Body>
                         <Card.Title>Weather In {name}</Card.Title>
                         <Card.Title>For: {time}</Card.Title>
