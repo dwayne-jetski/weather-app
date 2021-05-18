@@ -2,21 +2,22 @@ import React, { useState, useEffect } from 'react';
 import { Card, Row, Col, Button } from 'react-bootstrap';
 
 
-function WeatherCards(weatherData) {
+/* This react functional component is responsible for creating the weather card for the current weather */
 
-    useEffect(()=> {
-        
-    }, [weatherData])
+function CurrentWeatherCards(weatherData) {
 
-    const createWeatherCards = () => {
+    /* This function is called within the render function */
+    const createCurrentWeatherCard = () => {
 
-        const {name, main, weather, sys} = weatherData.data;
+        /* Here is where the necessary data is destructured from the passed in weather data */
+        const { name, main, weather, sys } = weatherData.data;
 
+        /* below is where I get the current time to be displayed on the card */
         let newDate = new Date();
         const time = newDate.toLocaleString();
 
 
-
+        /* This return statement returns a bootstrap card that organizes the destructured data */
         return(
             <div>
                 <Card bg="dark" text="light" className="card_style" style = {{ width: '20rem'}}>
@@ -45,11 +46,12 @@ function WeatherCards(weatherData) {
         <Row>
             <Col/>
             <Col>
-                {(weatherData != undefined) ? createWeatherCards() : <div>loading...</div>}
+                {/* Ternary operator to ensure that the createWeatherCards function does not load UNLESS it is not undefined. */}
+                {(weatherData != undefined) ? createCurrentWeatherCard() : <div>loading...</div>}
             </Col>
             <Col/>
         </Row>
     )
 }
 
-export default WeatherCards
+export default CurrentWeatherCards

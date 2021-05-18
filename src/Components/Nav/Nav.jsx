@@ -1,6 +1,8 @@
 import React from 'react';
 import { Col, Navbar } from 'react-bootstrap'
 
+/* This is just a simple navBar to make the app more aesthetically pleasing */
+
 function Nav() {
     return (
         <div>
