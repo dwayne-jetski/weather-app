@@ -45,7 +45,26 @@ function App() {
 
   //handle submit
   const handleSubmit = (event) => {
+    
+    event.preventDefault();
 
+    const getCityData = async () => {
+
+      const url = `${process.env.REACT_APP_API_URL}/weather?q=${values.userInput}&units=imperial&appid=${process.env.REACT_APP_API_KEY}`
+      console.log(url);
+
+      await fetch(url)
+      .then(res => res.json())
+      .then(result => {
+        setWeatherData(result)
+        console.log(result);
+      })
+      .catch(err => {console.log(err)});
+
+    }
+
+    getCityData();
+    
   }
 
   return (
@@ -55,7 +74,7 @@ function App() {
       <Row>
         <Col xs={4}/>
         <Col xs={4}>
-          <TextBox handleChange={handleChange} handleSumbit={handleSubmit}/>
+          <TextBox handleChange={handleChange} handleSubmit={handleSubmit} />
         </Col>
         <Col xs={4}/>
       </Row>

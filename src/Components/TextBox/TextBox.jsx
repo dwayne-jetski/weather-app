@@ -7,10 +7,10 @@ function TextBox(props) {
     return (
         <Row>
             <Col>
-                <Form inline >
+                <Form onSubmit={props.handleSubmit} >
                     <Row>
                         <Form.Control inline onChange={props.handleChange} name="userInput" type="text" placeholder="Enter City..." value={props.values}></Form.Control>
-                        <Button inline variant="dark" >Enter</Button>
+                        <Button inline variant="dark" type="submit" >Enter</Button>
                     </Row>
                 </Form>
             </Col>
