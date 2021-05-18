@@ -34,7 +34,7 @@
 ## About The Project
 
 <p align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
+  <a href="https://github.com/marcus-baumgardner/weather-app">
     <img src="images/myWeather.png" alt="Logo" width="800" height="600">
   </a>
 
