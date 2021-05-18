@@ -6,8 +6,6 @@ import Nav from './Components/Nav/Nav.jsx';
 import CurrentWeatherCard from './Components/CurrentWeatherCard/CurrentWeatherCard.jsx';
 import WeatherForcastCards from './Components/WeatherForcastCards/WeatherForcastCards.jsx';
 
-import axios from 'axios';
-
 function App() {
 
   const [ values, setValues ] = useState({});
