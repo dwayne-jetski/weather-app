@@ -21,7 +21,7 @@ function WeatherCards(weatherData) {
             <div>
                 <Card bg="dark" border='danger' text="light" className="card_style" style = {{ width: '20rem'}}>
                     <Card.Body>
-                        <Card.Title>Current Weather In {name}</Card.Title>
+                        <Card.Title>Weather In {name}</Card.Title>
                         <Card.Title>For: {time}</Card.Title>
                         <Card.Text>Current Temperature: {main.temp} {'\u00b0'}F</Card.Text>
                         <Card.Text>High: {main.temp_max} {'\u00b0'}F</Card.Text>
