@@ -22,14 +22,14 @@ function App() {
         setLongitude(position.coords.longitude);
       });
 
-      await fetch(`${process.env.REACT_APP_API_URL}/weather/?lat=${latitude}&lon=${longitude}&units=metric&APPID=${process.env.REACT_APP_API_KEY}`)
+      await fetch(`${process.env.REACT_APP_API_URL}/weather/?lat=${latitude}&lon=${longitude}&units=imperial&APPID=${process.env.REACT_APP_API_KEY}`)
       .then(res => res.json())
       .then(result => {
         setWeatherData(result)
         console.log(result);
       });
     }
-    
+
     fetchData();
   }, [latitude,longitude])
 
@@ -60,7 +60,7 @@ function App() {
         <Col xs={4}/>
       </Row>
       
-      {(weatherData.main != undefined) ? 
+      {(typeof weatherData.main != 'undefined') ? 
       <Row>
         <Col xs={2}/>
         <Col xs={8}>
