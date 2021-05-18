@@ -33,7 +33,12 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-I built this application as a technical challenge for an interview. It was a fun project that took about 4-5 hours worth of work! What it accomplishes is finding the weather and weather forecast for a user. When you open the site, if you allow it access to your location data it will automatically find the current weather and 5 day weather forecast for your area based off of your longitude and latitude. You can also type into the text box any location you'd like to search for and the application will find whatever data is available for that city and display it. The API the application utilizes is over at https://openweathermap.org/ and is free to use!
+<p align="center">
+  <a href="https://github.com/othneildrew/Best-README-Template">
+    <img src="images/myWeather.png" alt="Logo" width="800" height="600">
+  </a>
+
+I built this application as a technical challenge for an interview process. It was a fun project that took about 4-5 hours worth of work! What it accomplishes is finding the weather and weather forecast for a user based on location coordinates or search results. When you open the app, if you allow it access to your location data it will automatically find the current weather and 5 day weather forecast for your area based off of your longitude and latitude. You can also type into the text box any location you'd like to search for and the application will find whatever data is available for that city and display it. The API the application utilizes is over at https://openweathermap.org/ and is free to use!
 
 ### Built With
 
