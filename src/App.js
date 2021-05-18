@@ -36,7 +36,6 @@ function App() {
       .then(res => res.json())
       .then(result => {
         setWeatherForecast(result)
-        console.log("FORCAST!: ", result.list.filter((e, i) => i % 8 === 8 - 1));
       })
       .catch(err => {console.log(err)});
       
@@ -62,12 +61,20 @@ function App() {
     const getCityData = async () => {
 
       const url = `${process.env.REACT_APP_API_URL}/weather?q=${values.userInput}&units=imperial&appid=${process.env.REACT_APP_API_KEY}`
-      console.log(url);
+      const urlForecast= `${process.env.REACT_APP_API_URL}/forecast?q=${values.userInput}&units=imperial&appid=${process.env.REACT_APP_API_KEY}`
 
       await fetch(url)
       .then(res => res.json())
       .then(result => {
         setWeatherData(result)
+        console.log(result);
+      })
+      .catch(err => {console.log(err)});
+
+      await fetch(urlForecast)
+      .then(res => res.json())
+      .then(result => {
+        setWeatherForecast(result)
         console.log(result);
       })
       .catch(err => {console.log(err)});
